@@ -1,0 +1,16 @@
+<%- include('header') %>
+
+<div class="result">
+    <% if(error){ %>
+        <%- error %>
+        <a href="/"><button class="btn btn-secondary">Voltar</button></a>
+        <% }else { %>
+            Cotação:
+            <%= cotacao %> <img src="/coin.png" alt="dollar"> <br />
+            R$: <%= quantidade %> <br />
+            Equivalente a:
+            R$ <%= conversao %>  <br />
+            <a href="/"><button class="btn btn-secondary">Nova consulta</button></a>
+        <% } %>
+    </div>
+<%- include('footer') %>
